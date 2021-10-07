@@ -1,0 +1,27 @@
+{
+  "name": "sat-project",
+  "version": "1.0.0",
+  "description": "Twitter Sentiment Analysis built using MERN Stack.",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently -n 'server,client' -c 'green,blue' \"npm run server\" \"npm run client\""
+  },
+  "author": "Abhishek Chandarana",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.4",
+    "sentiment": "^5.0.2",
+    "twit": "^2.2.11"
+  }
+}
